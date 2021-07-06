@@ -18,16 +18,15 @@ class MovieList extends Component {
     const { getMovies } = movieAPI;
     const movies = getMovies();
     movies.then(
-      (movie) => this.setState({
+      (data) => this.setState({
         loading: false,
-        movies: movie,
+        movies: data,
       }),
     );
   }
 
   render() {
     const { movies, loading } = this.state;
-
     // Render Loading here if the request is still happening
     if (loading) return <Loading />;
 
