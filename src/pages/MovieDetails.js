@@ -8,6 +8,7 @@ class MovieDetails extends Component {
   constructor() {
     super();
 
+    this.MovieDel = this.MovieDel.bind(this);
     this.state = {
       loading: true,
     };
@@ -23,6 +24,11 @@ class MovieDetails extends Component {
         movie: data,
       }),
     );
+  }
+
+  MovieDel(id) {
+    const { deleteMovie } = movieAPI;
+    deleteMovie(id);
   }
 
   render() {
@@ -41,8 +47,11 @@ class MovieDetails extends Component {
         <p>{ `Storyline: ${storyline}` }</p>
         <p>{ `Genre: ${genre}` }</p>
         <p>{ `Rating: ${rating}` }</p>
-        <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-        <Link to="/">VOLTAR</Link>
+        <div>
+          <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
+          <Link to="/">VOLTAR</Link>
+          <Link to="/" onClick={ () => this.MovieDel(id) }>DELETAR</Link>
+        </div>
       </div>
     );
   }
