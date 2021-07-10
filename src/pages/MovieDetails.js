@@ -40,17 +40,35 @@ class MovieDetails extends Component {
 
     // title
     return (
-      <div data-testid="movie-details">
-        <img alt="Movie Cover" src={ `../${imagePath}` } />
-        <h1>{ `Title: ${title}` }</h1>
-        <p>{ `Subtitle: ${subtitle}` }</p>
-        <p>{ `Storyline: ${storyline}` }</p>
-        <p>{ `Genre: ${genre}` }</p>
-        <p>{ `Rating: ${rating}` }</p>
+      <div className="movie-details-div" data-testid="movie-details">
+        <img className="image-tag" alt="Movie Cover" src={ `../${imagePath}` } />
+        <div className="movie-details-info">
+          <h1>{ `Title: ${title}` }</h1>
+          <p>{ `Subtitle: ${subtitle}` }</p>
+          <p>{ `Storyline: ${storyline}` }</p>
+          <p>{ `Genre: ${genre}` }</p>
+          <p>{ `Rating: ${rating}` }</p>
+        </div>
         <div>
-          <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-          <Link to="/">VOLTAR</Link>
-          <Link to="/" onClick={ () => this.MovieDel(id) }>DELETAR</Link>
+          <Link
+            className="waves-effect waves-light btn botoes"
+            to={ `/movies/${id}/edit` }
+          >
+            EDITAR
+          </Link>
+          <Link
+            className="waves-effect waves-light btn orange botoes"
+            to="/"
+          >
+            VOLTAR
+          </Link>
+          <Link
+            className="waves-effect waves-light btn red botoes"
+            to="/"
+            onClick={ () => this.MovieDel(id) }
+          >
+            DELETAR
+          </Link>
         </div>
       </div>
     );

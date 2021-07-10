@@ -138,6 +138,7 @@ class MovieForm extends React.Component {
     return (
       <div>
         <button
+          className="btn-small green"
           type="button"
           onClick={ this.handleSubmit }
         >
@@ -150,7 +151,7 @@ class MovieForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form className="form-field">
           {this.renderTitleInput()}
           {this.renderSubtitleInput()}
           {this.renderImagePathInput()}

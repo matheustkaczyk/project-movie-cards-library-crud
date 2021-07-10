@@ -1,5 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
 body {
   background-color: whitesmoke;
   box-sizing: border-box;
 }
 
+.header-div {
+  background-color: #004643;
+  padding: 5vh;
+  font-family: Zen Tokyo Zoo;
+  color: #abd1c6;
+  text-align: center;
+  font-size: 4vw;
+  margin-bottom: 15px;
+}
+
+.button-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
+.btn-add {
+  padding: 5px;
+  background-color: #f9bc60;
+  color: #001e1d;
+  border-radius: 20%;
+  text-decoration: none;
+}
+
+.botoes {
+  margin-left: 20px;
+  margin-bottom: 5%;
+}
+
+.movie-card {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: solid #004643 3px;
+  border-style: inset;
+}
+
+.movie-details-div {
+  margin-left: 25%;
+  margin-right: 25%;
+  border: solid #004643 3px;
+  border-style: inset;
+}
+
+.form-field {
+  max-width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding-bottom: 3%;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.loading-item {
+  animation: is-rotating 1s infinite;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #e5e5e5;
+  border-top-color: #004643;
+  border-radius: 50%;
+  margin-top: 1.5%;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.movie-details-info {
+  padding: 3%;
+}
+
+.image-tag {
+  max-width: 100%;
+}
+
+.text-tags {
+  padding: 3%;
+}

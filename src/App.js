@@ -5,13 +5,18 @@ import MovieDetails from './pages/MovieDetails';
 import NewMovie from './pages/NewMovie';
 import EditMovie from './pages/EditMovie';
 import NotFound from './pages/NotFound';
+import './App.css';
 
 function App() {
   return (
     <div>
-      <div>Movie Card Library CRUD</div>
+      <div className="header-div">Movie Card Library CRUD</div>
       <BrowserRouter>
-        <Link to="/movies/new">ADICIONAR CARTÃO</Link>
+        <div className="button-div">
+          <Link to="/movies/new" className="waves-effect waves-light btn">
+            ADICIONAR CARTÃO
+          </Link>
+        </div>
         <Switch>
           <Route
             exact
@@ -36,6 +41,9 @@ function App() {
           <Route path="*" component={ NotFound } />
         </Switch>
       </BrowserRouter>
+      {/* <footer className="page-footer">
+        <h6>Matheus Tkaczyk Ribeiro 10/07/2021</h6>
+      </footer> */}
     </div>
   );
 }
