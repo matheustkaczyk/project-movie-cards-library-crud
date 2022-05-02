@@ -13,6 +13,7 @@ body {
   text-align: center;
   font-size: 4vw;
   margin-bottom: 15px;
+  border-bottom:  1.5px solid black;
 }
 
 .button-div {
@@ -49,6 +50,18 @@ body {
   margin-right: 25%;
   border: solid #004643 3px;
   border-style: inset;
+}
+
+.rating-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border: 2px solid black;
+  font-weight: 700;
+  font-size: 200%;
+  max-width: 8vh;
+  border-radius: 50%;
 }
 
 .form-field {

@@ -41,9 +41,6 @@ function App() {
           <Route path="*" component={ NotFound } />
         </Switch>
       </BrowserRouter>
-      {/* <footer className="page-footer">
-        <h6>Matheus Tkaczyk Ribeiro 10/07/2021</h6>
-      </footer> */}
     </div>
   );
 }
